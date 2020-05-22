@@ -1,0 +1,17 @@
+let isEven = (num) => {
+  if (num < 0) {
+    num = -num;
+  }
+    if (num > 1) {
+      return isEven(num - 2)
+    }
+  return num == 0;
+}
+      
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+console.log(isEven(-2));
+// → ??
