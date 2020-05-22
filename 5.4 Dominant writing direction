@@ -1,0 +1,15 @@
+function dominantDirection(text) {
+  let scripts = countBy(text, char => characterScript(char.codePointAt(0)))
+  .filter(({name}) => name != null);
+  let most = 0;
+  for (let i = 0; i < scripts.length; i++) {
+    if (scripts[i].count > most) most = i;
+  }
+  return scripts[most].name.direction;
+};
+
+console.log(dominantDirection("Hello!"));
+// → ltr
+
+console.log(dominantDirection("Hey, مساء الخير"));
+// → rtl
