@@ -1,0 +1,18 @@
+let countChar = (phrase, char) => {
+  let chars = 0;
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] == char) {
+      chars++;
+    }
+  }
+  return chars;
+}
+
+let countBs = phrase => {
+  return countChar(phrase, "B");
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
