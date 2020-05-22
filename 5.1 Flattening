@@ -1,0 +1,9 @@
+let arrays = [[1, 2, 3], [4, 5], [6]];
+let flatten = [];
+flatten = arrays.reduce(
+  function(arrayPart, arrayString) {
+    return arrayPart.concat(arrayString)
+  });
+
+console.log(flatten);
+// → [1, 2, 3, 4, 5, 6]
